@@ -6,13 +6,14 @@ mod utils;
 
 use std::fs;
 
-use generate::generate;
+use generate::{generate, Config};
 
 use crate::render::render;
 
 fn main() {
-  let space = generate();
-  let svg = render(&space);
+  let config = Config { stars_count: 100 };
+  let space = generate(config);
+  let svg = render(space);
   fs::create_dir_all("dist/").unwrap();
   fs::write("dist/rkt.svg", svg).unwrap();
 }
