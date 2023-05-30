@@ -14,6 +14,5 @@ fn main() {
   let config = Config { stars_count: 100 };
   let space = generate(config);
   let svg = render(space);
-  fs::create_dir_all("dist/").unwrap();
-  fs::write("dist/rkt.svg", svg).unwrap();
+  fs::write("banner.svg", svg).unwrap();
 }

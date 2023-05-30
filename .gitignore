@@ -3,5 +3,4 @@
 .research/
 .vagrant/
 .vscode/
-dist/
 target/
